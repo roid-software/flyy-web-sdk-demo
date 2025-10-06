@@ -7,8 +7,8 @@ import { CodeBlock, dracula } from "react-code-blocks";
 const flyySDK = new FlyySDK();
 
 function App() {
-    const [partnerId, setPartnerId] = useState("");
-    const [packageName, setPackageName] = useState("");
+    const [partnerId, setPartnerId] = useState("89a3e8bed066cc07268e");
+    const [packageName, setPackageName] = useState("com.adityabirlacapitaldigital.OneApp");
     const [environment, setEnvironment] = useState("STAGING");
     const [partnerKey, setPartnerKey] = useState("");
     const [userName, setUserName] = useState("");
@@ -27,7 +27,6 @@ function App() {
     const [referralInfoMsg, setReferralInfoMsg] = useState("")
     const [referralHistoryMessage, setReferralHistoryMessage] = useState("")
     const [productKey, setProductKey] = useState("");
-    const [apiResponse, setApiResponse] = useState("");
     const [loading, setLoading] = useState(false);
     const [passReferrer, setPassReferrer] = useState("")
     const [passDeviceID, setPassDeviceID] = useState("")
@@ -645,6 +644,19 @@ function App() {
                                 theme={dracula} />
                                 <p className={"card-text"}>It will only work when there is any live offer available</p>
                             <button onClick={() => flyySDK.openDailyCheckInOffer()} className={"form-control btn-primary mt-2 submit-button"} >Daily CheckIn</button>
+                        </div>
+                    </div>
+
+                    <div className={"card m-2"} style={{ width: 20 + 'rem' }}>
+                        <h5 className={"card-header"}>LB Method</h5>
+                        <div className={"card-body"}>
+                            <h6 className={"card-subtitle mb-2 text-muted"}>To Open LB Screen</h6>
+                            <CodeBlock
+                                text={"flyySDK.openLeaderBoardScreen()"}
+                                language={language}
+                                theme={dracula} />
+                                <p className={"card-text"}>This Method is to Open LB Screen.</p>
+                            <button onClick={() => flyySDK.openLeaderBoardScreen()} className={"form-control btn-primary mt-2  submit-button"} >Offers</button>
                         </div>
                     </div>
 
