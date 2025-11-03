@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import "./App.css";
-import FlyySDK from "flyy-web-sdk-staging";
+import React, { useState } from 'react';
+import './App.css';
+import FlyySDK from "flyy-web-sdk";
 import { CodeBlock, dracula } from "react-code-blocks";
 
 const flyySDK = new FlyySDK();
@@ -9,7 +9,7 @@ function App() {
     const [partnerId, setPartnerId] = useState("89a3e8bed066cc07268e");
     const [packageName, setPackageName] = useState("com.adityabirlacapitaldigital.OneApp");
     const [environment, setEnvironment] = useState("STAGING");
-    const [partnerKey, setPartnerKey] = useState("");
+    const [partnerKey, setPartnerKey] = useState("LZDHf0Fm055M3tOIxDfCKGS5LRdExE9H5eQNYf0c");
     const [userName, setUserName] = useState("");
     const [token, setToken] = useState("");
     const [deviceId, setDeviceId] = useState("");
