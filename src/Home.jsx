@@ -1,24 +1,23 @@
 import React, { useState } from 'react';
 import './App.css';
-import FlyySDK from "flyy-web-sdk";
+import FlyySDK from "flyy-web-sdk-staging";
 import { CodeBlock, dracula } from "react-code-blocks";
 
 const flyySDK = new FlyySDK();
 
 function Home() {
-  const [activeTab, setActiveTab] = useState("code");
-    const [partnerId, setPartnerId] = useState("89a3e8bed066cc07268e");
+    const [partnerId, setPartnerId] = useState("89a3e8bed066cc07268e")//"2e053db78af3548f75c4");//"fe9be1d2d901351e4bd6")//"89a3e8bed066cc07268e"); 
     const [packageName, setPackageName] = useState("com.adityabirlacapitaldigital.OneApp");
     const [environment, setEnvironment] = useState("STAGING");
-    const [partnerKey, setPartnerKey] = useState("LZDHf0Fm055M3tOIxDfCKGS5LRdExE9H5eQNYf0c");
-    const [userName, setUserName] = useState("");
+    const [partnerKey, setPartnerKey] = useState("LZDHf0Fm055M3tOIxDfCKGS5LRdExE9H5eQNYf0c");//"egJTXVeLMW4LOyDsUF9JLzdetGKV05RcIY5FO5e5");//"iMmw4dYwIUXbgy16UBRPhc3PizsNydNdXfSjGrg7")//"LZDHf0Fm055M3tOIxDfCKGS5LRdExE9H5eQNYf0c");
+    const [userName, setUserName] = useState("peter");
     const [token, setToken] = useState("");
     const [deviceId, setDeviceId] = useState("");
     const [isCustomQuizPageEnabled, setIsCustomQuizPageEnabled] = useState("YES")
     const [isCustomLogoEnabled, setIsCustomLogoEnabled] = useState("YES")
     const [isTitle, setIsTitle] = useState("Thank You")
     const [isDescription, setIsDescription] = useState("You are wise in your financial decisions.")
-    const [isDescriptionColour, setIsDescriptionColour] = useState("#808080")
+    const [isDescriptionColour, setIsDescriptionColour] = useState("#1D2678") // 808080
     const [isTitleColour, setIsTitleColour] = useState("#000000")
     const [isButtonTextColour, setIsButtonTextColour] = useState("#FFFFFF")
     const [isButtonColour, setIsButtonColour] = useState("#C7222A")
@@ -30,7 +29,7 @@ function Home() {
     const [loading] = useState(false);
     const [passReferrer, setPassReferrer] = useState("")
     const [passDeviceID, setPassDeviceID] = useState("")
-    const [isDarkTheme, setIsDarkTheme] = useState(false);
+    const [isDarkTheme, setIsDarkTheme] = useState(true);
 
   const sdkMethods = [
      {
