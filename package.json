@@ -15,7 +15,7 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
     "bootstrap": "^5.3.5",
-    "flyy-web-sdk": "file:../flyy-sdk-package",
+    "flyy-web-sdk": "^3.2.3",
     "flyy-web-sdk-staging": "file:../flyy-sdk-package",
     "react": "^19.0.0",
     "react-code-blocks": "^0.1.6",
