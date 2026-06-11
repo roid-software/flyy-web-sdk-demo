@@ -6,11 +6,11 @@
   "scripts": {
     "dev": "vite",
     "dev:local": "npm run use-local-sdk && vite",
-    "build": "npm run use-npm-sdk && vite build",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "use-local-sdk": "npm uninstall flyy-web-sdk && npm install file:/Users/apple/Documents/flyy/flyy-sdk-package",
-    "use-npm-sdk": "npm uninstall flyy-web-sdk && npm install flyy-web-sdk@^3.0.4"
+    "use-local-sdk": "npm install file:/Users/apple/Documents/flyy/flyy-sdk-package",
+    "use-npm-sdk": "npm install flyy-web-sdk@^3.2.3"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
