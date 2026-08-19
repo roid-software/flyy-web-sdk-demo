@@ -67,6 +67,7 @@ function Home() {
     const [environment, setEnvironment] = useState(import.meta.env.VITE_FLYY_LOCAL_ENV || "STAGING");
     const [partnerKey, setPartnerKey] = useState(import.meta.env.VITE_FLYY_PARTNER_KEY || "");
     const [userName, setUserName] = useState(import.meta.env.VITE_FLYY_DEFAULT_USER || "");
+    const [isNew, setIsNew] = useState(true);
     const [token, setToken] = useState("");
     const [deviceId, setDeviceId] = useState("");
     const [isCustomQuizPageEnabled, setIsCustomQuizPageEnabled] = useState("YES")
@@ -330,7 +331,7 @@ function Home() {
               "partner-key": partnerKey,
               "content-type": "application/json",
             },
-            body: JSON.stringify({ is_new: "false", username: userName }),
+            body: JSON.stringify({ is_new: isNew, username: userName }),
           }
         );
 
@@ -772,6 +773,16 @@ function Home() {
                   placeholder="e.g. tds_user1"
                   className={inputClass}
                 />
+                <input
+                  type="checkbox"
+                  checked={isNew}
+                  onChange={(e) => setIsNew(e.target.checked)}
+                />
+                <label className="text-sm text-gray-700 cursor-pointer">
+                  Is New User
+                </label>
+              </div>
+              <div className="mt-4">
                 <button
                   onClick={() => {
                     startFlyy();
